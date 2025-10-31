@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSE (Server-Sent Events) 演示</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 SSE 演示</h1>
+            <p>Server-Sent Events 实时数据流演示</p>
+        </div>
+
+        <div class="controls">
+            <button id="connectBtn" class="btn-connect">连接</button>
+            <button id="disconnectBtn" class="btn-disconnect" disabled>断开</button>
+            <button id="clearBtn" class="btn-clear">清空</button>
+        </div>
+
+        <div class="status">
+            <div class="status-indicator" id="statusIndicator"></div>
+            <span id="statusText">未连接</span>
+        </div>
+
+        <div class="messages" id="messagesContainer">
+            <div class="empty-state">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <p>点击"连接"按钮开始接收服务器推送的消息</p>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value" id="messageCount">0</div>
+                <div class="stat-label">消息总数</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="notificationCount">0</div>
+                <div class="stat-label">通知数</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="milestoneCount">0</div>
+                <div class="stat-label">里程碑</div>
+            </div>
+        </div>
+    </div>
+<script defer src="js/main.js"></script><script defer src="js/main.js"></script></body>
+</html>
+
